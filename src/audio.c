@@ -1748,12 +1748,7 @@ float GetMusicTimeLength(Music music)
 // Get current music time played (in seconds)
 float GetMusicTimePlayed(Music music)
 {
-    float secondsPlayed = 0.0f;
-
-    unsigned int samplesPlayed = music->totalSamples - music->samplesLeft;
-    secondsPlayed = (float)samplesPlayed/music->stream.sampleRate;
-
-    return secondsPlayed;
+    return (float)(music->totalSamples - music->samplesLeft) / music->stream.sampleRate;
 }
 
 
