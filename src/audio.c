@@ -1570,7 +1570,7 @@ void UpdateMusicStream(Music music)
         UpdateAudioStream(music->stream, pcm, samplesCount);
         music->samplesLeft -= samplesCount;
 
-        if (music->samplesLeft <= 0)
+        if (music->samplesLeft == 0)
         {
             streamEnding = true;
             break;
@@ -1654,7 +1654,7 @@ void UpdateMusicStream(Music music)
             UpdateAudioStream(music->stream, pcm, samplesCount);
             music->samplesLeft -= samplesCount;
 
-            if (music->samplesLeft <= 0)
+            if (music->samplesLeft == 0)
             {
                 streamEnding = true;
                 break;
