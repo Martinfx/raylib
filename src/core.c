@@ -1074,7 +1074,7 @@ Ray GetMouseRay(Vector2 mousePosition, Camera camera)
 Vector2 GetWorldToScreen(Vector3 position, Camera camera)
 {
     // Calculate projection matrix (from perspective instead of frustum
-    Matrix matProj;
+    Matrix matProj = {0};
 
     if(camera.type == CAMERA_PERSPECTIVE) 
     {
