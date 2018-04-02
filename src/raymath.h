@@ -290,8 +290,6 @@ RMDEF Vector3 Vector3CrossProduct(Vector3 v1, Vector3 v2)
 // Calculate one vector perpendicular vector
 RMDEF Vector3 Vector3Perpendicular(Vector3 v)
 {
-    Vector3 result = { 0 };
-
     float min = fabsf(v.x);
     Vector3 cardinalAxis = {1.0f, 0.0f, 0.0f};
 
@@ -308,9 +306,7 @@ RMDEF Vector3 Vector3Perpendicular(Vector3 v)
         cardinalAxis = tmp;
     }
 
-    result = Vector3CrossProduct(v, cardinalAxis);
-
-    return result;
+    return Vector3CrossProduct(v, cardinalAxis);
 }
 
 // Calculate vector length
